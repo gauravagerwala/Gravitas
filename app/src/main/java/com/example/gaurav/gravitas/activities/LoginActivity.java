@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.gaurav.gravitas.Others.AttemptLogin;
 import com.example.gaurav.gravitas.R;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
@@ -31,6 +32,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         /* TODO: Create the thread to verify details from backend here */
+        new AttemptLogin.execute();
         Intent i= new Intent(LoginActivity.this,MainActivity.class);
         startActivity(i);
     }
